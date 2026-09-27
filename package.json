@@ -1,0 +1,28 @@
+{
+    "name": "laya-client-example",
+    "module": "src/index.ts",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "prepare": "lefthook install",
+        "lint": "biome check .",
+        "lint:fix": "biome check --write .",
+        "check:types": "tsc",
+        "check:health": "bun run fallow health",
+        "start": "bun run src/index.ts"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^2.5.14",
+        "@commitlint/cli": "^21.2.3",
+        "@commitlint/config-conventional": "^21.2.3",
+        "@types/bun": "^1.4.2",
+        "fallow": "^3.30.0",
+        "lefthook": "^2.1.14",
+        "typescript": "^7.0.2"
+    },
+    "dependencies": {
+        "@octokit/core": "^7.0.8",
+        "console-table-printer": "^2.16.1",
+        "laya-http-client": "^0.2.0"
+    }
+}
